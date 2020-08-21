@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements itemClickListener
 
         folderRecycler = findViewById(R.id.folderRecycler);
         folderRecycler.addItemDecoration(new MarginDecoration(this));
-        folderRecycler.hasFixedSize();
+       // folderRecycler.hasFixedSize();
         ArrayList<imageFolder> folds = getPicturePaths();
 
         if(folds.isEmpty()){
