@@ -11,8 +11,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/folderCard"
-        android:layout_width="140dp"
-        android:layout_height="220dp"
+        android:layout_width="155dp"
+        android:layout_height="170dp"
         app:cardCornerRadius="1dp"
         android:layout_marginBottom="10dp"
         >
