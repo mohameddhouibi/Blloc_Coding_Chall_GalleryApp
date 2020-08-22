@@ -123,16 +123,13 @@ public class pictureBrowserFragment extends Fragment implements imageIndicatorLi
 
                 if(previousSelected != -1){
                     allImages.get(previousSelected).setSelected(false);
-                    previousSelected = position;
-                    allImages.get(position).setSelected(true);
-                    indicatorRecycler.getAdapter().notifyDataSetChanged();
-                    indicatorRecycler.scrollToPosition(position);
-                }else{
-                    previousSelected = position;
-                    allImages.get(position).setSelected(true);
-                    indicatorRecycler.getAdapter().notifyDataSetChanged();
-                    indicatorRecycler.scrollToPosition(position);
                 }
+                previousSelected = position;
+                allImages.get(position).setSelected(true);
+                if (indicatorRecycler.getAdapter() != null){
+                    indicatorRecycler.getAdapter().notifyDataSetChanged();
+                }
+                indicatorRecycler.scrollToPosition(position);
             }
 
             @Override
@@ -240,7 +237,7 @@ public class pictureBrowserFragment extends Fragment implements imageIndicatorLi
         }
 
         @Override
-        public void destroyItem(ViewGroup containerCollection, int position, Object view) {
+        public void destroyItem(@NonNull ViewGroup containerCollection, int position, Object view) {
             ((ViewPager) containerCollection).removeView((View) view);
         }
 
