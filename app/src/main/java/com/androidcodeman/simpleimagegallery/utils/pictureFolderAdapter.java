@@ -76,12 +76,11 @@ public class pictureFolderAdapter extends RecyclerView.Adapter<pictureFolderAdap
     }
 
 
-    public class FolderHolder extends RecyclerView.ViewHolder{
+    static public class FolderHolder extends RecyclerView.ViewHolder{
         ImageView folderPic;
         TextView folderName;
         //set textview for foldersize
         TextView folderSize;
-
         CardView folderCard;
 
         public FolderHolder(@NonNull View itemView) {

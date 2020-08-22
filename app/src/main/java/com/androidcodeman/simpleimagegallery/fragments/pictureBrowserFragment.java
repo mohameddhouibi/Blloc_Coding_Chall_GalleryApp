@@ -137,7 +137,7 @@ public class pictureBrowserFragment extends Fragment implements imageIndicatorLi
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                //nothing to do
             }
         });
 
